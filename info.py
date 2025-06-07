@@ -29,11 +29,11 @@ NEWGRP = environ.get("NEWGRP", "https://telegra.ph/file/4407fd523f1e0b46df1d0.jp
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5291735551').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001697462193').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '5291735551').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL', '-1001938860214')
-auth_grp = environ.get('AUTH_GROUPS', '')
+auth_grp = environ.get('AUTH_GROUPS', '-1001815666845')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 FILDLT_CNL = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('FILDLT_CNL', '0').split()]
@@ -44,9 +44,9 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "yabesh")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Channel Button Links
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/MiNiFiLX_Auto_Group')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/MiNiFiLX')
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/+KL6-out5MalkNzA1')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+eu3Rj9Kub485ZmU9')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/tmd_links')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/tmd_links')
 MSG_ALRT = environ.get('MSG_ALRT', '<b>Share and Support Us ❤️</b>')
 
 # Custom Chats
@@ -69,7 +69,7 @@ LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False")
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001697462193')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), False)
@@ -84,7 +84,7 @@ DELETE_TIME = int(environ.get('DELETE_TIME', 700))
 SPL_DELETE_TIME = int(environ.get('SPL_DELETE_TIME', 30))
 
 # Url Shortner
-URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'https://adrinolinks.in')
+URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'adrinolinks.in')
 URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', 'd30088a576b4c4aaeeabbbd7b33530ef10233621')
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
